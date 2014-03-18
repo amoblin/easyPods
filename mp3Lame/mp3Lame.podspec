@@ -87,7 +87,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = 'libmp3Lame/*.{h,m}'
+  s.source_files  = 'mp3Lame/*.{h,m}'
 
   # s.public_header_files = 'Classes/**/*.h'
 
@@ -103,8 +103,7 @@ Pod::Spec.new do |s|
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 
-  s.preserve_paths = "**/*.a"
-
+  s.preserve_paths = 'mp3Lame/libmp3lame.a', 'libmp3lame.a'
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -115,9 +114,8 @@ Pod::Spec.new do |s|
   # s.framework  = 'SomeFramework'
   # s.frameworks = 'SomeFramework', 'AnotherFramework'
 
-  s.library   = 'mp3lame'
+  s.libraries   = 'mp3lame'
   # s.libraries = 'iconv', 'xml2'
-
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -127,7 +125,7 @@ Pod::Spec.new do |s|
 
   # s.requires_arc = true
 
-  # s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
+  s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/mp3Lame/mp3Lame"' }
   # s.dependency 'JSONKit', '~> 1.4'
 
 end
