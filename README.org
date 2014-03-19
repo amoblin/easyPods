@@ -16,7 +16,7 @@ pod 'OggVorbis', :podspec => 'https://raw.github.com/amoblin/easyPods/master/Ogg
 
 ** SGActionView
 #+BEGIN_SRC 
-pod 'SGActionView', :podspec => 'https://raw.github.com/amoblin/easyPods/master/SGActionView/SGActionView.podspec'
+pod 'SGActionView', :podspec => 'https://raw.github.com/amoblin/easyPods/master/SGActionView.podspec'
 #+END_SRC
 
 ** Multi Layer Navigation
