@@ -7,4 +7,5 @@ Pod::Spec.new do |s|
   s.platform = :ios, '5.0'
   s.source = { :git => "https://github.com/sagiwei/SGActionView.git", :branch => "master" }
   s.source_files = "SGActionView/*.{h,m}"
+  s.requires_arc = true
 end
