@@ -10,26 +10,26 @@ easyPods make you use CocoaPods more easier. It's the third-part repo for CocoaP
 
 ** Talking Data APP CPA
 #+BEGIN_SRC
-pod 'TalkingData-APP-CPA', :podspec => 'https://raw.github.com/amoblin/easyPods/master/TalkingData-APP-CPA/TalkingData-APP-CPA.podspec'
+pod 'TalkingData-APP-CPA', :podspec => 'https://raw.githubusercontent.com/amoblin/easyPods/master/TalkingData-APP-CPA/TalkingData-APP-CPA.podspec'
 #+END_SRC
 ** Ogg Vorbis Decoder
 #+BEGIN_SRC 
-pod 'OggVorbis', :podspec => 'https://raw.github.com/amoblin/easyPods/master/OggVorbis/OggVorbis.podspec'
+pod 'OggVorbis', :podspec => 'https://raw.githubusercontent.com/amoblin/easyPods/master/OggVorbis/OggVorbis.podspec'
 #+END_SRC
 
 ** SGActionView
 #+BEGIN_SRC 
-pod 'SGActionView', :podspec => 'https://raw.github.com/amoblin/easyPods/master/SGActionView.podspec'
+pod 'SGActionView', :podspec => 'https://raw.githubusercontent.com/amoblin/easyPods/master/SGActionView.podspec'
 #+END_SRC
 
 ** Multi Layer Navigation
 
 #+BEGIN_SRC 
-pod 'MultiLayerNavigation', :podspec => 'https://raw.github.com/amoblin/easyPods/master/MultiLayerNavigation.podspec'
+pod 'MultiLayerNavigation', :podspec => 'https://raw.githubusercontent.com/amoblin/easyPods/master/MultiLayerNavigation.podspec'
 #+END_SRC
 
 ** mp3Lame
 
 #+BEGIN_SRC CocoaPods
-pod 'mp3Lame', :podspec => 'https://raw.github.com/amoblin/easyPods/master/mp3Lame/mp3Lame.podspec'
+pod 'mp3Lame', :podspec => 'https://raw.githubusercontent.com/amoblin/easyPods/master/mp3Lame/mp3Lame.podspec'
 #+END_SRC
