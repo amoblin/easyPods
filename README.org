@@ -8,28 +8,27 @@
 
 easyPods make you use CocoaPods more easier. It's the third-part repo for CocoaPods.
 
+** Tencent Open API
+#+BEGIN_SRC sh
+pod 'TencentOpenAPI', :podspec => 'https://raw.githubusercontent.com/amoblin/easyPods/master/TencentOpenAPI/TencentOpenApi.podspec'
+#+END_SRC
 ** Talking Data APP CPA
-#+BEGIN_SRC
+#+BEGIN_SRC sh
 pod 'TalkingData-APP-CPA', :podspec => 'https://raw.githubusercontent.com/amoblin/easyPods/master/TalkingData-APP-CPA/TalkingData-APP-CPA.podspec'
 #+END_SRC
 ** Ogg Vorbis Decoder
-#+BEGIN_SRC 
+#+BEGIN_SRC sh
 pod 'OggVorbis', :podspec => 'https://raw.githubusercontent.com/amoblin/easyPods/master/OggVorbis/OggVorbis.podspec'
 #+END_SRC
-
 ** SGActionView
-#+BEGIN_SRC 
+#+BEGIN_SRC sh
 pod 'SGActionView', :podspec => 'https://raw.githubusercontent.com/amoblin/easyPods/master/SGActionView.podspec'
 #+END_SRC
-
 ** Multi Layer Navigation
-
-#+BEGIN_SRC 
+#+BEGIN_SRC sh
 pod 'MultiLayerNavigation', :podspec => 'https://raw.githubusercontent.com/amoblin/easyPods/master/MultiLayerNavigation.podspec'
 #+END_SRC
-
 ** mp3Lame
-
-#+BEGIN_SRC CocoaPods
+#+BEGIN_SRC sh
 pod 'mp3Lame', :podspec => 'https://raw.githubusercontent.com/amoblin/easyPods/master/mp3Lame/mp3Lame.podspec'
 #+END_SRC
