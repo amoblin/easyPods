@@ -8,6 +8,10 @@
 
 easyPods make you use CocoaPods more easier. It's the third-part repo for CocoaPods.
 
+** Getui SDK
+#+BEGIN_SRC sh
+pod 'Getui-SDK', :podspec => 'https://raw.githubusercontent.com/amoblin/easyPods/master/Getui-SDK/Getui.podspec'
+#+END_SRC
 ** Tencent Open API
 #+BEGIN_SRC sh
 pod 'TencentOpenAPI', :podspec => 'https://raw.githubusercontent.com/amoblin/easyPods/master/TencentOpenAPI/TencentOpenApi.podspec'
