@@ -7,6 +7,7 @@ Pod::Spec.new do |s|
   s.source = { :git => "https://github.com/amoblin/easyPods.git", :branch => "master" }
   s.ios.vendored_frameworks = 'TencentOpenAPI/TencentOpenAPI.framework'
   s.resource = "TencentOpenAPI/TencentOpenApi_IOS_Bundle.bundle"
-  s.frameworks =  'TencentOpenAPI'
+  s.frameworks =  'TencentOpenAPI', 'Security', 'SystemConfiguration', 'CoreGraphics', 'CoreTelephony'
+  s.libraries = 'iconv', 'sqlite3', 'stdc++', 'z'
   s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/TencentOpenAPI/TencentOpenAPI"' }
 end
