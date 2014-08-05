@@ -8,6 +8,10 @@
 
 easyPods make you use CocoaPods more easier. It's the third-part repo for CocoaPods.
 
+** 友盟推送
+#+BEGIN_SRC sh
+pod 'UMessage', :podspec => 'https://raw.githubusercontent.com/amoblin/easyPods/master/UMessage/UMessage.podspec'
+#+END_SRC
 ** 小米推送
 #+BEGIN_SRC sh
 pod 'MiPush', :podspec => 'https://raw.githubusercontent.com/amoblin/easyPods/master/MiPush/MiPush.podspec'
