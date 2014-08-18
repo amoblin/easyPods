@@ -74,9 +74,25 @@ typedef NS_ENUM(NSInteger, kUMessageError) {
 + (void)startWithAppkey:(NSString *)appKey launchOptions:(NSDictionary *)launchOptions;
 
 /** 注册RemoteNotification的类型
+ @brief 开启消息推送，实际调用：[[UIApplication sharedApplication] registerForRemoteNotificationTypes:types];
+ @warning 此接口只针对 iOS 7及其以下的版本，iOS 8 请使用 `registerRemoteNotificationAndUserNotificationSettings`
  @param types 消息类型，参见`UIRemoteNotificationType`
  */
-+ (void)registerForRemoteNotificationTypes:(UIRemoteNotificationType)types;
++ (void)registerForRemoteNotificationTypes:(UIRemoteNotificationType)types NS_DEPRECATED_IOS(3_0, 8_0, "Please use registerRemoteNotificationAndUserNotificationSettings instead");
+
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000
+/** 注册RemoteNotification的类型
+ @brief 开启消息推送，实际调用：[[UIApplication sharedApplication] registerForRemoteNotifications]和registerUserNotificationSettings;
+ @warning 此接口只针对 iOS 8及其以上的版本，iOS 7 请使用 `registerForRemoteNotificationTypes`
+ @param types 消息类型，参见`UIRemoteNotificationType`
+ */
++ (void)registerRemoteNotificationAndUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings NS_AVAILABLE_IOS(8_0);
+#endif
+
+/** 解除RemoteNotification的注册（关闭消息推送，实际调用：[[UIApplication sharedApplication] unregisterForRemoteNotifications]）
+ @param types 消息类型，参见`UIRemoteNotificationType`
+ */
++ (void)unregisterForRemoteNotifications;
 
 /** 向友盟注册该设备的deviceToken，便于发送Push消息
  @param deviceToken APNs返回的deviceToken
@@ -106,7 +122,7 @@ typedef NS_ENUM(NSInteger, kUMessageError) {
 + (void)setBadgeClear:(BOOL)value;
 
 /** 设置是否允许SDK当应用在前台运行收到Push时弹出Alert框（默认开启）
- @warning 建议不要关闭，否则会丢失程序在前台收到的Push的点击统计
+ @warning 建议不要关闭，否则会丢失程序在前台收到的Push的点击统计,如果定制了 Alert，可以使用`sendClickReportForRemoteNotification`补发 log
  @param value 是否开启弹出框
  */
 + (void)setAutoAlert:(BOOL)value;
@@ -115,6 +131,13 @@ typedef NS_ENUM(NSInteger, kUMessageError) {
  @param channel 渠道名称
  */
 + (void)setChannel:(NSString *)channel;
+
+/** 为某个消息发送点击事件
+ @warning 请注意不要对同一个消息重复调用此方法，可能导致你的消息打开率飚升，此方法只在需要定制 Alert 框时调用
+ @param userInfo 消息体的NSDictionary，此Dictionary是
+        (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo中的userInfo
+ */
++ (void)sendClickReportForRemoteNotification:(NSDictionary *)userInfo;
 
 
 ///---------------------------------------------------------------------------------------
