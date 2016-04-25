@@ -9,8 +9,13 @@
 easyPods make you use CocoaPods more easier. It's the third-part repo for CocoaPods.
 
 ** HoedownOC
+already in cocoapods.
 #+BEGIN_SRC sh
-pod 'HoedownOC', :podspec => 'https://raw.githubusercontent.com/amoblin/HoedownOC/master/HoedownOC.podspec'
+pod 'HoedownOC'
+#+END_SRC
+** WANetwork
+#+BEGIN_SRC sh
+pod 'WANetwork', :podspec => 'https://raw.githubusercontent.com/amoblin/WANetwork/master/WANetwork.podspec'
 #+END_SRC
 ** 友盟推送
 #+BEGIN_SRC sh
